@@ -10,6 +10,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { PokemonsComponent } from './pokemons/pokemons.component';
 import { FavorisComponent } from './favoris/favoris.component';
+import { FooterComponent } from './footer/footer.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,7 +19,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent, PokemonsComponent, PokemonsComponent, FavorisComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, PokemonsComponent, PokemonsComponent, FavorisComponent, FooterComponent],
   imports: [BrowserModule, AppRoutingModule, MatToolbarModule, MatIconModule, RouterModule.forRoot(appRoutes)],
   providers: [],
   bootstrap: [AppComponent],
