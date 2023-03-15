@@ -43,22 +43,3 @@ export class PokemonCardComponent implements OnInit{
     this.isFavorite = !this.isFavorite;
   }
 }
-
-/* if(type.name === 'Poison') this.type.color = '#923FCC';
-      if(type.name === 'Plante') this.type.color = '#3DA224';
-      if(type.name === 'Feu') this.type.color = '#E4F0F7';
-      if(type.name === 'Eau') this.type.color = '#2481EF';
-      if(type.name === 'Insecte') this.type.color = '#92A212';
-      if(type.name === 'Normal') this.type.color = '#A0A2A0';
-      if(type.name === 'Vol') this.type.color = '#82BAEF';
-      if(type.name === 'Combat') this.type.color = '#FF8100';
-      if(type.name === 'Psy') this.type.color = '#EF3F7A';
-      if(type.name === 'Electrik') this.type.color = '#FAC100';
-      if(type.name === 'Glace') this.type.color = '#E4F0F7';
-      if(type.name === 'Sol') this.type.color = '#92501B';
-      if(type.name === 'Roche') this.type.color = '#B0AA82';
-      if(type.name === 'Spectre') this.type.color = '#703F70';
-      if(type.name === 'Dragon') this.type.color = '#4F60E2';
-      if(type.name === 'Acier') this.type.color = '#60A2B9';
-      if(type.name === 'Fée') this.type.color = '#EF70EF';
-      if(type.name === 'Ténèbres') this.type.color = '#4F3F3D'; */
