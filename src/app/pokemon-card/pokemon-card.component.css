@@ -8,6 +8,14 @@ mat-card {
   font-size: 0.9em;
   transition: all 0.2s ease-in-out;
   text-align: center;
+  background-color: rgb(71, 71, 71);
+  color: white;
+}
+mat-card h2 {
+  font-family: "Poppins", sans-serif;
+}
+mat-card span{
+  font-family: "NTR", sans-serif;
 }
 mat-card img.pokemonImage {
   width: 100%;
@@ -15,7 +23,7 @@ mat-card img.pokemonImage {
   max-width: 150px;
   float: left;
   border-radius: 50%;
-  box-shadow: 0 0 2px rgba(0,0,0,0.5);
+  border: 2px solid #ffffff;
   transition: all 0.5s ease-in-out;
 }
 mat-card-content {
@@ -29,3 +37,8 @@ mat-card:hover {
   transition: all 0.2s ease-in-out;
   transform: scale(1.03);
 }
+mat-chip {
+  font-family: "NTR", sans-serif;
+  font-size: 13pt;
+}
+

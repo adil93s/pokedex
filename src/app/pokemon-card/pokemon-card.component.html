@@ -5,13 +5,13 @@
       <h2>{{name}}</h2>
     </mat-card-title>
     <mat-chip-listbox *ngFor="let type of types">
-      <mat-chip>
+      <mat-chip [ngStyle]="{'background-color': type.color}">
         <img matChipAvatar [src]="type.image" alt="Pokemon Type Image" />
-        <span matChipTrailingIcon>{{type.name}}</span>
+        {{type.name}}
       </mat-chip>
     </mat-chip-listbox>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button color="primary" [routerLink]="['/pokemon', id]">View Details</button>
+    <fa-icon [icon]="isFavorite ? fullHeartIcon : heartIcon" size="2x" [ngStyle]="{color : isFavorite ? 'red' : 'gray'}" (click)="toggleFavorite()"></fa-icon>
   </mat-card-actions>
 </mat-card>

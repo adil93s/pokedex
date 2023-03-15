@@ -14,7 +14,10 @@ import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
+import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -22,8 +25,8 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, PokemonsComponent, HomeComponent, PokemonCardComponent, FooterComponent],
-  imports: [BrowserModule, AppRoutingModule, MatToolbarModule, MatIconModule, MatListModule, MatCardModule, MatChipsModule, MatGridListModule, RouterModule.forRoot(appRoutes)],
+  declarations: [AppComponent, HeaderComponent, PokemonsComponent, HomeComponent, PokemonCardComponent, FooterComponent, LoadingSpinnerComponent],
+  imports: [BrowserModule, AppRoutingModule, MatToolbarModule, MatIconModule, MatListModule, MatCardModule, MatProgressSpinnerModule, MatChipsModule, MatGridListModule, RouterModule.forRoot(appRoutes), FontAwesomeModule],
   providers: [],
   bootstrap: [AppComponent],
 })
