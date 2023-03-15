@@ -1,12 +1,13 @@
 .footer {
+  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  width: 100%;
-  padding: 20px;
+  height: 100px;
   text-align: center;
   font-family: "NTR", sans-serif;
   font-weight: bold;
+  padding: 20px;
 }
 
 .row {
@@ -35,5 +36,6 @@
 }
 
 .footer p {
-  color: white;
+  color: #e7e7e7;
+  text-align: center;
 }
