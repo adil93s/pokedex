@@ -1,8 +1,6 @@
 .footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  flex-shrink: 0;
+  flex-grow: 0;
   height: 100px;
   text-align: center;
   font-family: "NTR", sans-serif;
@@ -38,5 +36,5 @@
 .footer p {
   color: #e7e7e7;
   text-align: center;
-  margin : 0 auto;
+  margin: 0 auto;
 }
