@@ -22,7 +22,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, PokemonsComponent, HomeComponent, PokemonCardComponent],
+  declarations: [AppComponent, HeaderComponent, PokemonsComponent, HomeComponent, PokemonCardComponent, FooterComponent],
   imports: [BrowserModule, AppRoutingModule, MatToolbarModule, MatIconModule, MatListModule, MatCardModule, MatChipsModule, MatGridListModule, RouterModule.forRoot(appRoutes)],
   providers: [],
   bootstrap: [AppComponent],
