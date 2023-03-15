@@ -5,10 +5,8 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin: auto;
 }
 
-main {
-  flex: 1 0 auto;
+.content {
+  flex-grow: 1;
 }
