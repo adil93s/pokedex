@@ -23,7 +23,7 @@ mat-card img.pokemonImage {
   max-width: 150px;
   float: left;
   border-radius: 50%;
-  border: 2px solid #ffffff;
+  border: 2px solid #8f8f8f;
   transition: all 0.5s ease-in-out;
 }
 mat-card-content {
@@ -32,6 +32,7 @@ mat-card-content {
   transition: all 0.5s ease-in-out;
   text-shadow: 1px 1px rgba(0,0,0,0);
   min-width: 250px;
+  padding-left: 40px;
 }
 mat-card:hover {
   transition: all 0.2s ease-in-out;
@@ -41,4 +42,3 @@ mat-chip {
   font-family: "NTR", sans-serif;
   font-size: 13pt;
 }
-
