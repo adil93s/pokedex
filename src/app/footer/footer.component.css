@@ -1,10 +1,7 @@
-body{
-  display: flex;
-  flex-direction: column;
-}
+
 
 .footer {
-  position: flex;
+  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
