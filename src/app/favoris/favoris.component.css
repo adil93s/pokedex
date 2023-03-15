@@ -40,3 +40,8 @@ ul {
   font-size: 18px;
   color: #bbb;
 }
+
+.pokemon a {
+  text-decoration: none;
+  color: #bbb;
+}

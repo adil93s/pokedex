@@ -1,14 +1,11 @@
 .footer {
-  margin-top: auto;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  position: absolute;
   height: 100px;
   text-align: center;
   font-family: "NTR", sans-serif;
   font-weight: bold;
-  padding: 20px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  padding: 3px 15px;
 }
 
 .row {
