@@ -6,13 +6,14 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { PokemonsComponent } from './pokemons/pokemons.component';
+import { FooterComponent } from './footer/footer.component';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { PokemonsComponent } from './pokemons/pokemons.component';
-import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
 import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
 
 const appRoutes: Routes = [

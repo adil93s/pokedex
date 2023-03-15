@@ -1,4 +1,3 @@
-<app-header></app-header>
 <mat-grid-list *ngIf="!isLoading; else loading" cols="3" rowHeight="2:1">
   <mat-grid-tile *ngFor="let pokemon of data" >
     <app-pokemon-card [id]="pokemon.id" [image]="pokemon.image" [name]="pokemon.name" [types]="pokemon.apiTypes"></app-pokemon-card>
