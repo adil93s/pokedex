@@ -12,6 +12,6 @@
     </mat-chip-listbox>
   </mat-card-content>
   <mat-card-actions>
-    <fa-icon [icon]="isFavorite ? fullHeartIcon : heartIcon" size="2x" [ngStyle]="{color : isFavorite ? 'red' : 'gray'}" (click)="toggleFavorite()"></fa-icon>
+    <fa-icon [icon]="isFavorite ? fullHeartIcon : heartIcon" size="2x" [ngStyle]="{color : isFavorite ? 'red' : 'gray'}" (click)="addToFavorites()"></fa-icon>
   </mat-card-actions>
 </mat-card>

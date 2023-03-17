@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
 import { faHeart as fasHeart } from '@fortawesome/free-solid-svg-icons';
 
@@ -15,6 +15,13 @@ export class PokemonCardComponent implements OnInit{
   isFavorite: boolean = false;
   heartIcon = farHeart;
   fullHeartIcon = fasHeart;
+
+  @Output() addFavoriteEvent = new EventEmitter<boolean>();
+
+  addToFavorites() {
+    this.isFavorite = !this.isFavorite;
+    this.addFavoriteEvent.emit(this.isFavorite);
+  }
 
   ngOnInit(): void {
     for (let index = 0; index < this.types.length; index++) {
@@ -37,9 +44,5 @@ export class PokemonCardComponent implements OnInit{
       if(this.types[index].name === 'Fée') this.types[index].color = '#EF70EF';
       if(this.types[index].name === 'Ténèbres') this.types[index].color = '#4F3F3D';
     }
-  }
-
-  toggleFavorite () {
-    this.isFavorite = !this.isFavorite;
   }
 }
