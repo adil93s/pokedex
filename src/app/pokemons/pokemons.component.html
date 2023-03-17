@@ -1,12 +1,12 @@
-<mat-grid-list *ngIf="!this.isLoading" cols="3" rowHeight="2:1">
-  <mat-grid-tile *ngFor="let pokemon of this.data">
+<mat-grid-list *ngIf="!isLoading" cols="3" rowHeight="2:1">
+  <mat-grid-tile *ngFor="let pokemon of data">
     <app-pokemon-card
       [id]="pokemon.id"
       [image]="pokemon.image"
       [name]="pokemon.name"
       [types]="pokemon.apiTypes"
-      (addFavoriteEvent)="addRemoveFavorite($event,pokemon.id)"
     ></app-pokemon-card>
   </mat-grid-tile>
 </mat-grid-list>
-<app-loading-spinner *ngIf="this.isLoading"></app-loading-spinner>
+<ng-template *ngIf="isLoading"> Loading... </ng-template>
+<app-loading-spinner *ngIf="isLoading"></app-loading-spinner>

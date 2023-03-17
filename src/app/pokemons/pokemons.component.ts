@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { DataProvider } from '../DataProvider';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
 	selector: 'app-pokemons',
@@ -7,16 +6,19 @@ import { DataProvider } from '../DataProvider';
 	styleUrls: ['./pokemons.component.css']
 })
 
-export class PokemonsComponent{
-  data: any = DataProvider.data;
-  isLoading: boolean = DataProvider.isLoading;
-  favorites: any[] = DataProvider.favorites;
+export class PokemonsComponent implements OnInit {
+	title = 'HTTP using native fetch API';
+	private url: string = 'https://pokebuildapi.fr/api/v1/pokemon';
 
-  addRemoveFavorite(isFavorite: boolean, id: number) {
-    if (!isFavorite) {
-      this.favorites = this.favorites.filter(favorite => favorite.id !== id);
-    } else {
-      this.favorites.push(this.data[id-1]);
-    }
+  isLoading: boolean = true;
+  data: any;
+
+  ngOnInit(): void {
+    fetch(this.url)
+      .then((response) => response.json())
+      .then((pokemonsData) => {
+        this.isLoading = false;
+        this.data = pokemonsData;
+      });
   }
 }
