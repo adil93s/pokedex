@@ -1,8 +1,9 @@
 
-<div *ngFor="let type of data.results" class="card">
-    <a>
+<a *ngFor="let type of data.results" [routerLink]="['/affinite',type.name]">
+    <div class="card">
         {{type.name}}
-    </a>
-</div>
+    </div>
+</a>
+
 
 

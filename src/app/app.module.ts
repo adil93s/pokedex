@@ -10,15 +10,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { PokemonsComponent } from './pokemons/pokemons.component';
 import { AffiniteComponent } from './affinite/affinite.component';
+import { AffiniteDetailsComponent } from './affinite/affinite-details/affinite-details.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'pokemons', component: PokemonsComponent },
-  { path: 'affinite', component: AffiniteComponent }
+  { path: 'affinite', component: AffiniteComponent },
+  { path: 'affinite/:id', component : AffiniteDetailsComponent}
 ];
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent, PokemonsComponent, PokemonsComponent, AffiniteComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, PokemonsComponent, PokemonsComponent, AffiniteComponent, AffiniteDetailsComponent],
   imports: [BrowserModule, AppRoutingModule, MatToolbarModule, MatIconModule, RouterModule.forRoot(appRoutes)],
   providers: [],
   bootstrap: [AppComponent],
