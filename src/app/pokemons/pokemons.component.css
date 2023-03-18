@@ -10,8 +10,30 @@ mat-grid-list {
   height: 70vh;
 }
 
-.pokemons span {
+.header {
+  margin: 5% auto;
+  width: 40%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border-left: solid 6px #ff9696;
+}
+
+.title {
+  padding-left: 15px;
   font-size: 30px;
-  color: #fff;
+  color: #e7e7e7;
+  font-family: "Poppins";
+  font-weight: 800;
+  text-transform: uppercase;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to right, #ff9696, #d45656);
+  -webkit-background-image: -webkit-linear-gradient(to right, #ff9696, #d45656);
+  color: transparent;
+}
+
+.header .subtitle {
+  color: #e7e7e7;
   font-family: "NTR";
 }
