@@ -12,7 +12,7 @@ mat-grid-list {
 
 .header {
   margin: 5% auto;
-  width: 40%;
+  width: 540px;
   text-align: center;
   display: flex;
   flex-direction: column;
