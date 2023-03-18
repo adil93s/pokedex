@@ -1,7 +1,10 @@
 <div class="favoris">
   <div class="header">
     <span class="title">Tes Pokemons Favoris</span>
-    <span class="subtitle">Ajoute tes pokemons prefere dans tes favoris</span>
+    <span class="subtitle"
+      >Ajoute tes pokemons prefere dans tes favoris en seulement un
+      clique.</span
+    >
   </div>
   <ul>
     <li *ngFor="let pokemon of favorites" class="pokemon">
@@ -10,7 +13,7 @@
           <fa-icon
             [icon]="fullHeartIcon"
             size="2x"
-            [ngStyle]="{ color: 'red' }"
+            [ngStyle]="{ color: '#a30000' }"
             (click)="removeFavorite(pokemon.id)"
           ></fa-icon>
         </mat-card-actions>
