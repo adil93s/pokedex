@@ -18,7 +18,6 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { DataProvider } from './DataProvider';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -29,7 +28,7 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [AppComponent, HeaderComponent, PokemonsComponent, HomeComponent, PokemonCardComponent, FooterComponent, LoadingSpinnerComponent, FavorisComponent],
   imports: [BrowserModule, AppRoutingModule, MatToolbarModule, MatIconModule, MatListModule, MatCardModule, MatProgressSpinnerModule, MatChipsModule, MatGridListModule, RouterModule.forRoot(appRoutes), FontAwesomeModule],
-  providers: [DataProvider],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
