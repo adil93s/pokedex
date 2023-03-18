@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataProvider } from './DataProvider';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pokedex';
+  constructor() {
+    DataProvider.setData();
+  }
 }
