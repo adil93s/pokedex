@@ -13,8 +13,14 @@ ul {
   flex-wrap: wrap;
 }
 
+a {
+  color: #e7e7e7;
+  text-decoration: none;
+}
+
 .pokemon {
   width: 300px;
+  height: 100%;
   margin: 20px auto;
   padding: 20px;
   background-color: #333;
@@ -23,25 +29,29 @@ ul {
   text-align: center;
 }
 
-.pokemon img {
-  max-width: 100%;
+mat-card h2 {
+  font-family: "Poppins", sans-serif;
 }
-
-.pokemon h2 {
-  margin-top: 10px;
-  margin-bottom: 5px;
-  font-size: 24px;
-  color: #fff;
+mat-card span{
+  font-family: "NTR", sans-serif;
 }
-
-.pokemon p {
-  margin: 0;
-  padding: 0;
-  font-size: 18px;
-  color: #bbb;
+mat-card-content {
+  float: left;
+  text-align: left;
+  transition: all 0.5s ease-in-out;
+  text-shadow: 1px 1px rgba(0,0,0,0);
+  min-width: 250px;
+  padding-left: 40px;
 }
-
-.pokemon a {
-  text-decoration: none;
-  color: #bbb;
+.pokemon:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.03);
+}
+mat-chip-listbox {
+  display: inline-block;
+  margin-right : 20px;
+}
+mat-chip {
+  font-family: "NTR", sans-serif;
+  font-size: 13pt;
 }

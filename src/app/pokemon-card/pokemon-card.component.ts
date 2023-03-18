@@ -1,6 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
 import { faHeart as fasHeart } from '@fortawesome/free-solid-svg-icons';
+import { DataProvider } from '../DataProvider';
 
 @Component({
   selector: 'app-pokemon-card',
@@ -12,11 +13,13 @@ export class PokemonCardComponent implements OnInit{
   @Input() name!: string;
   @Input() image!: string;
   @Input() types!: any;
-  isFavorite: boolean = false;
+  @Output() toggleFavoriteEvent = new EventEmitter<boolean>();
+  isFavorite!: boolean;
   heartIcon = farHeart;
   fullHeartIcon = fasHeart;
 
   ngOnInit(): void {
+    this.isFavorite = DataProvider.favorites.find((pokemon: any) => pokemon.id === this.id) !== undefined;
     for (let index = 0; index < this.types.length; index++) {
       if(this.types[index].name === 'Poison') this.types[index].color = '#923FCC';
       if(this.types[index].name === 'Plante') this.types[index].color = '#3DA224';
@@ -41,5 +44,6 @@ export class PokemonCardComponent implements OnInit{
 
   toggleFavorite () {
     this.isFavorite = !this.isFavorite;
+    this.toggleFavoriteEvent.emit(this.isFavorite);
   }
 }

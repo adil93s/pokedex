@@ -5,6 +5,7 @@
       [image]="pokemon.image"
       [name]="pokemon.name"
       [types]="pokemon.apiTypes"
+      (toggleFavoriteEvent)="toggleFavorite(pokemon.id)"
     ></app-pokemon-card>
   </mat-grid-tile>
 </mat-grid-list>

@@ -17,4 +17,14 @@ export class PokemonsComponent implements OnInit {
       this.data = DataProvider.data;
     });
   }
+
+  toggleFavorite (id: number) {
+    const pokemon = DataProvider.data.find((pokemon: any) => pokemon.id === id);
+    const index = DataProvider.favorites.indexOf(pokemon);
+    if (index === -1) {
+      DataProvider.favorites.push(pokemon);
+    } else {
+      DataProvider.favorites.splice(index, 1);
+    }
+  }
 }
