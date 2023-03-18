@@ -1,27 +1,39 @@
-<main>
-  <h1>Mes Pokémons favoris</h1>
+<div class="favoris">
+  <div class="header">
+    <span class="title">Tes Pokemons Favoris</span>
+    <span class="subtitle">Ajoute tes pokemons prefere dans tes favoris</span>
+  </div>
   <ul>
     <li *ngFor="let pokemon of favorites" class="pokemon">
       <mat-card>
         <mat-card-actions>
-          <fa-icon [icon]="fullHeartIcon" size="2x" [ngStyle]="{color : 'red'}"
-            (click)="removeFavorite(pokemon.id)"></fa-icon>
+          <fa-icon
+            [icon]="fullHeartIcon"
+            size="2x"
+            [ngStyle]="{ color: 'red' }"
+            (click)="removeFavorite(pokemon.id)"
+          ></fa-icon>
         </mat-card-actions>
-        <img mat-card-image [src]="pokemon.image" alt="Pokemon Image" class="pokemonImage">
+        <img
+          mat-card-image
+          [src]="pokemon.image"
+          alt="Pokemon Image"
+          class="pokemonImage"
+        />
         <mat-card-content>
           <mat-card-title>
             <a [routerLink]="['/pokemon', pokemon.id]">
-              <h2>{{pokemon.name}}</h2>
+              <h2>{{ pokemon.name }}</h2>
             </a>
           </mat-card-title>
           <mat-chip-listbox *ngFor="let type of pokemon.apiTypes">
-            <mat-chip [ngStyle]="{'background-color': type.color}">
+            <mat-chip [ngStyle]="{ 'background-color': type.color }">
               <img matChipAvatar [src]="type.image" alt="Pokemon Type Image" />
-              {{type.name}}
+              {{ type.name }}
             </mat-chip>
           </mat-chip-listbox>
         </mat-card-content>
       </mat-card>
     </li>
   </ul>
-</main>
+</div>

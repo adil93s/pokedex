@@ -1,6 +1,33 @@
-h1 {
+.favoris {
+  min-height: 100vh;
+}
+
+.header {
+  margin: 5% auto;
+  width: 40%;
   text-align: center;
-  color: #fff;
+  display: flex;
+  flex-direction: column;
+  border-left: solid 6px #ff9696;
+}
+
+.title {
+  padding-left: 15px;
+  font-size: 30px;
+  color: #e7e7e7;
+  font-family: "Poppins";
+  font-weight: 800;
+  text-transform: uppercase;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to right, #ff9696, #d45656);
+  -webkit-background-image: -webkit-linear-gradient(to right, #ff9696, #d45656);
+  color: transparent;
+}
+
+.header .subtitle {
+  color: #e7e7e7;
+  font-family: "NTR";
 }
 
 ul {
@@ -23,24 +50,29 @@ a {
   height: 100%;
   margin: 20px auto;
   padding: 20px;
-  background-color: #333;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
   text-align: center;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 153, 153, 0.08) 0%,
+    rgba(255, 255, 255, 0.08) 100%
+  );
+  color: #e7e7e7;
+  display: flex;
+  flex-direction: column;
 }
 
 mat-card h2 {
   font-family: "Poppins", sans-serif;
 }
-mat-card span{
-  font-family: "NTR", sans-serif;
+mat-card span {
+  font-family: "Fira Code", monospace;
 }
 mat-card-content {
-  float: left;
   text-align: left;
   transition: all 0.5s ease-in-out;
-  text-shadow: 1px 1px rgba(0,0,0,0);
-  min-width: 250px;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0);
+  min-width: 150px;
   padding-left: 40px;
 }
 .pokemon:hover {
@@ -49,7 +81,7 @@ mat-card-content {
 }
 mat-chip-listbox {
   display: inline-block;
-  margin-right : 20px;
+  margin-right: 20px;
 }
 mat-chip {
   font-family: "NTR", sans-serif;
