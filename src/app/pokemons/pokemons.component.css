@@ -5,3 +5,13 @@ mat-grid-list {
   text-align: center;
   width: 100%;
 }
+
+.loadpage {
+  height: 70vh;
+}
+
+.pokemons span {
+  font-size: 30px;
+  color: #fff;
+  font-family: "NTR";
+}

@@ -1,4 +1,7 @@
-nav {
+.header {
+  height: 100px;
+}
+.header nav {
   display: flex;
   align-items: center;
   padding: 10px;

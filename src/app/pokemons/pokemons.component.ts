@@ -18,6 +18,7 @@ export class PokemonsComponent implements OnInit {
       .then((response) => response.json())
       .then((pokemonsData) => {
         this.isLoading = false;
+        
         this.data = pokemonsData;
       });
   }

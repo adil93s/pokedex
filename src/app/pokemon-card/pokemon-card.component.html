@@ -1,17 +1,22 @@
 <mat-card>
-  <img mat-card-image [src]="image" alt="Pokemon Image" class="pokemonImage">
+  <img mat-card-image [src]="image" alt="Pokemon Image" class="pokemonImage" />
   <mat-card-content>
     <mat-card-title>
-      <h2>{{name}}</h2>
+      <h2>{{ name }}</h2>
     </mat-card-title>
     <mat-chip-listbox *ngFor="let type of types">
-      <mat-chip [ngStyle]="{'background-color': type.color}">
+      <mat-chip [ngStyle]="{ 'background-color': type.color }">
         <img matChipAvatar [src]="type.image" alt="Pokemon Type Image" />
-        {{type.name}}
+        {{ type.name }}
       </mat-chip>
     </mat-chip-listbox>
   </mat-card-content>
   <mat-card-actions>
-    <fa-icon [icon]="isFavorite ? fullHeartIcon : heartIcon" size="2x" [ngStyle]="{color : isFavorite ? 'red' : 'gray'}" (click)="toggleFavorite()"></fa-icon>
+    <fa-icon
+      [icon]="isFavorite ? fullHeartIcon : heartIcon"
+      size="2x"
+      [ngStyle]="{ color: isFavorite ? '#a30000' : 'gray' }"
+      (click)="toggleFavorite()"
+    ></fa-icon>
   </mat-card-actions>
 </mat-card>
