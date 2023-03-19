@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./affinite.component.css']
 })
 export class AffiniteComponent implements OnInit {
-  title = 'HTTP using native fetch API';
+
   private url: string = 'https://pokeapi.co/api/v2/type';
 
   isLoading: boolean = true;
@@ -20,14 +20,5 @@ export class AffiniteComponent implements OnInit {
         this.isLoading = false;
         this.data = AffiniteData;
       });
-
-    for(let i=1;i<20;i++){
-      fetch('https://pokeapi.co/api/v2/type/'+i)
-      .then((response) => response.json())
-      .then((typesdata) => {
-        this.isLoading = false;
-        this.types = typesdata;
-      });
-    }
   }
 }

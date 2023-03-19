@@ -1,0 +1,13 @@
+h1{
+    text-align: center;
+}
+
+div{
+    display: inline-flex;
+    width: 500px;
+    height: 500px;
+}
+
+span{
+    text-align: center;
+}
