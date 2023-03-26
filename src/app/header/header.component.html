@@ -1,13 +1,23 @@
-<nav>
-  <div class="logo">
-    <a routerLink="/">
-      <img src="assets/images/pokedex-logo.png" alt="Pokedex Logo" />
-    </a>
-  </div>
-  <ul>
-    <li><a routerLink="/pokemons">Pokemons</a></li>
-    <li><a routerLink="/favorites">Favoris</a></li>
-    <li><a routerLink="/about">À propos</a></li>
-    <li><a routerLink="/affinite">affinite</a></li>
-  </ul>
-</nav>
+<div class="header">
+  <nav class="navbar" [ngClass]="{ show: navbarVisible }">
+    <div class="logo">
+      <a routerLink="/">
+        <img src="assets/images/pokedex-logo.png" alt="Pokedex Logo" />
+      </a>
+    </div>
+    <ul>
+      <li>
+        <a routerLink=""><span>01.</span> Home</a>
+      </li>
+      <li>
+        <a routerLink="/pokemons"><span>02.</span> Pokemons</a>
+      </li>
+      <li>
+        <a routerLink="/favorites"><span>03.</span> Favoris</a>
+      </li>
+      <li>
+        <a routerLink="/affinite"><span>04.</span> Affinite</a>
+      </li>
+    </ul>
+  </nav>
+</div>

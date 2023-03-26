@@ -1,0 +1,41 @@
+.footer {
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 130px;
+  text-align: center;
+  font-family: "NTR", sans-serif;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: white;
+}
+
+.logo {
+  margin: 0;
+}
+
+.footer img {
+  width: 75px;
+  height: 75px;
+}
+
+.footer p {
+  color: #e7e7e7;
+  text-align: center;
+  margin: 0 auto;
+}

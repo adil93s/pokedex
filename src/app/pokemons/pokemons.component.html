@@ -1,1 +1,23 @@
-<p>pokemons works!</p>
+<div *ngIf="!isLoading" class="pokemons">
+  <div class="header">
+    <span class="title">Liste des Pokemon</span>
+    <span class="subtitle"
+      >Decouvre l'ensemble des pokemons de la premiere generation a la
+      derniere.</span
+    >
+  </div>
+  <mat-grid-list cols="3" rowHeight="2:1">
+    <mat-grid-tile *ngFor="let pokemon of data">
+      <app-pokemon-card
+        [id]="pokemon.id"
+        [image]="pokemon.image"
+        [name]="pokemon.name"
+        [types]="pokemon.apiTypes"
+        (toggleFavoriteEvent)="toggleFavorite(pokemon.id)"
+      ></app-pokemon-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+<div *ngIf="isLoading" class="loadpage">
+  <app-loading-spinner></app-loading-spinner>
+</div>
