@@ -1,7 +1,11 @@
+<div class="header">
+    <span class="title">types</span>
+    <span class="subtitle">Decouvre tous les types des pokemons et leurs affinites</span>
+</div>
 
-<a *ngFor="let type of data" [routerLink]="['/affinite',type.name]">
-    <div class="card">
-        {{type.name}}
-        <img src={{type.image}}>
-    </div>
-</a>
+<div class="types">
+    <a *ngFor="let type of data" [routerLink]="['/affinite',type.name]" >    
+        <span>{{type.name}}</span>
+        <img src={{type.image}}>     
+    </a>
+</div>
