@@ -1,9 +1,7 @@
 
-<a *ngFor="let type of data.results" [routerLink]="['/affinite',type.name]">
+<a *ngFor="let type of data" [routerLink]="['/affinite',type.name]">
     <div class="card">
         {{type.name}}
+        <img src={{type.image}}>
     </div>
 </a>
-
-
-

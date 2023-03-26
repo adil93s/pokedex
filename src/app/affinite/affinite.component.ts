@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AffiniteComponent implements OnInit {
 
-  private url: string = 'https://pokeapi.co/api/v2/type';
+  private url: string = 'https://pokebuildapi.fr/api/v1/types';
 
   isLoading: boolean = true;
   data: any;

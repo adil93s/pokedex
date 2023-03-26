@@ -2,48 +2,15 @@
     {{id}}
 </h1>
 
+<img src={{data[0].apiTypes[0].image}}>
+
+
+<h2>degat multiplicateur</h2>
 
 
 <div class="double damage from">
-    <span>double damage from</span>
     <ul>
-        <li *ngFor="let d of data.damage_relations.double_damage_from">{{d.name}}</li>
-    </ul>
-</div>
-
-<div class="double damage to">
-    <span>double damage to</span>
-    <ul>
-        <li *ngFor="let d of data.damage_relations.double_damage_to">{{d.name}}</li>
-    </ul>
-</div>
-
-<div class="half damage from">
-    <span>half damage from</span>
-    <ul>
-        <li *ngFor="let d of data.damage_relations.half_damage_from">{{d.name}}</li>
-    </ul>
-</div>
-
-
-<div class="half damage to">
-    <span>half damage to</span>
-    <ul>
-        <li *ngFor="let d of data.damage_relations.half_damage_to">{{d.name}}</li>
-    </ul>
-</div>
-
-<div class="no damage from">
-    <span>no damage from</span>
-    <ul>
-        <li *ngFor="let d of data.damage_relations.no_damage_from">{{d.name}}</li>
-    </ul>
-</div>
-
-<div class="no damage to">
-    <span>no damage to</span>
-    <ul>
-        <li *ngFor="let d of data.damage_relations.no_damage_to">{{d.name}}</li>
+        <li *ngFor="let d of data[0].apiResistances">{{d.name}}  {{d.damage_multiplier}}</li>
     </ul>
 </div>
 
