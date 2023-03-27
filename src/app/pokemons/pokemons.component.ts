@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataProvider } from '../DataProvider';
-
+import { HttpClient } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-pokemons',
   templateUrl: './pokemons.component.html',
@@ -9,6 +10,8 @@ import { DataProvider } from '../DataProvider';
 export class PokemonsComponent implements OnInit {
   data: any = DataProvider.data;
   isLoading: boolean = DataProvider.isLoading;
+  searchTerm: any;
+  results: any = [];
 
   ngOnInit(): void {
     DataProvider.loadingUpdated.subscribe((isLoading) => {
