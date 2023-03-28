@@ -8,6 +8,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { PokemonsComponent } from './pokemons/pokemons.component';
+import { AffiniteComponent } from './affinite/affinite.component';
+import { AffiniteDetailsComponent } from './affinite/affinite-details/affinite-details.component';
 import { FavorisComponent } from './favoris/favoris.component';
 import { FooterComponent } from './footer/footer.component';
 import { MatListModule } from '@angular/material/list';
@@ -27,11 +29,14 @@ import { Ng2SearchPipeModule } from "ng2-search-filter";
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'pokemons', component: PokemonsComponent },
+  { path: 'affinite', component: AffiniteComponent },
   { path: 'favorites', component: FavorisComponent },
+  { path: 'affinite/:id', component : AffiniteDetailsComponent}
 ];
 
+
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, PokemonsComponent, HomeComponent, PokemonCardComponent, FooterComponent, LoadingSpinnerComponent, FavorisComponent],
+  declarations: [AppComponent, HeaderComponent, PokemonsComponent, HomeComponent, PokemonCardComponent, FooterComponent, LoadingSpinnerComponent, FavorisComponent, AffiniteComponent, AffiniteDetailsComponent],
   imports: [BrowserModule, AppRoutingModule, MatToolbarModule, MatIconModule, MatListModule, MatCardModule, MatProgressSpinnerModule, MatChipsModule, MatGridListModule, RouterModule.forRoot(appRoutes), FontAwesomeModule, HttpClientModule,FormsModule,Ng2SearchPipeModule],
   providers: [DataProvider],
   bootstrap: [AppComponent],
