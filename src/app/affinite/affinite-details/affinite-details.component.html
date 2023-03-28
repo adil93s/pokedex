@@ -1,16 +1,17 @@
-<h1>
-    {{id}}
-</h1>
+<div class="titre">
+    <h1>
+        {{id}}
+    </h1>
 
-<img src={{data[0].apiTypes[0].image}}>
+    <img src={{data[0].apiTypes[0].image}}>
+</div>
+
+<h2>Multiplicateur de degats VS :</h2>
 
 
-<h2>degat multiplicateur</h2>
-
-
-<div class="double damage from">
+<div class="Multiplicateur degat">
     <ul>
-        <li *ngFor="let d of data[0].apiResistances">{{d.name}}  {{d.damage_multiplier}}</li>
+        <li *ngFor="let d of data[0].apiResistances">{{d.name}}  : {{d.damage_multiplier}}</li>
     </ul>
 </div>
 
