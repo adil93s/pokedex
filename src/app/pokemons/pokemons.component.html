@@ -7,8 +7,13 @@
     >
   </div>
   <mat-grid-list cols="3" rowHeight="2:1">
-   ///<input type="text" [(ngModel)]="searchTerm"  placeholder="Rechercher un Pokémon">
-    <mat-grid-tile *ngFor="let pokemon of data | filter:searchTerm">
+    <input
+      class="search"
+      type="text"
+      [(ngModel)]="searchTerm"
+      placeholder="Rechercher un Pokémon"
+    />
+    <mat-grid-tile *ngFor="let pokemon of data | filter : searchTerm">
       <app-pokemon-card
         [id]="pokemon.id"
         [image]="pokemon.image"
